@@ -1,0 +1,35 @@
+ @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@300&display=swap');
+body{
+    background-image: linear-gradient(to right, #ffffff, #e0dffe, #b8c2fe, #83a8ff, #0090ff);
+  font-family: 'Hahmlet', serif;
+  
+  
+}
+tr{
+    font-weight: normal;
+}
+td{
+    padding-left:100px ;
+}
+.para{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    color: rgb(1, 27, 75);
+    font-size: x-large;
+    font-weight: bolder;
+}
+.weather{
+    margin-left: 10px;
+    margin-right: 10px;
+    background: rgb(10, 135, 173) ;
+    border-radius: 50px;
+    padding: 50px;
+    color: rgb(110, 30, 50);
+}
+@media (min-width:600px){
+    .weather{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
