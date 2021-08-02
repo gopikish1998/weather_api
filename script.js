@@ -1,6 +1,6 @@
 async function getCityData(){
     const my_id='8d74606b-afcf-4bf5-94e3-9dab3b2dd3f4';
-    const state_data = await fetch(`http://api.airvisual.com/v2/states?country=india&key=${my_id}`)
+    const state_data = await fetch(`https://api.airvisual.com/v2/states?country=india&key=${my_id}`)
     .then((x)=>x.json())
     .catch(error => console.log('error', error));
     // console.log(state_data);
@@ -63,7 +63,7 @@ async function getCityData(){
     option2.innerText="select city";
     city_name.append(option2);     
         var c=document.getElementById("input").value;
-        var city = await fetch(`http://api.airvisual.com/v2/cities?state=${c}&country=india&key=${my_id}`).then((x)=>x.json());
+        var city = await fetch(`https://api.airvisual.com/v2/cities?state=${c}&country=india&key=${my_id}`).then((x)=>x.json());
         console.log(city);
         for(j of city.data){
             var y=document.createElement("option");
@@ -74,7 +74,7 @@ async function getCityData(){
         var z= city_name.value;
         city_name.onchange=(async function(){
             z=city_name.value;
-            var da = await fetch(`http://api.airvisual.com/v2/city?city=${z}&state=${c}&country=India&key=${my_id}`).then((x)=>x.json()).catch(error => console.log('error', error));
+            var da = await fetch(`https://api.airvisual.com/v2/city?city=${z}&state=${c}&country=India&key=${my_id}`).then((x)=>x.json()).catch(error => console.log('error', error));
             console.log(da.data.current.weather)
             weather.className="weather";
             weather.innerHTML = `
